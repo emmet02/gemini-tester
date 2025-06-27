@@ -108,6 +108,30 @@ Alternatively, to open a web browser for PR creation (which bypasses command-lin
 gh pr create --base <base-branch> --head <head-branch> --web
 ```
 
+### File-Based Commit Messages and PR Bodies
+
+Due to potential issues with command-line argument parsing, especially on Windows, it is often more reliable to use a file-based approach for longer commit messages or pull request bodies. This involves writing the message/body content to a temporary file and then referencing that file in the Git or GitHub CLI command.
+
+For Git commits:
+
+```bash
+# Write message to a temporary file
+echo "Your commit message" > /path/to/temp/commit_message.txt
+# Commit using the file
+git commit -F /path/to/temp/commit_message.txt
+```
+
+For GitHub CLI pull requests:
+
+```bash
+# Write body to a temporary file
+echo "Your PR body" > /path/to/temp/pr_body.txt
+# Create PR using the body file
+gh pr create --base <base-branch> --head <head-branch> --title "Your PR Title" --body-file /path/to/temp/pr_body.txt
+```
+
+Temporary files for this purpose should be stored in the `/temp` directory within the project root, which is already configured to be ignored by Git.
+
 ### Windows Environment and Line Endings
 
 This project is developed on a Windows operating system. Be aware that Windows typically uses CRLF (Carriage Return + Line Feed) for line endings, while Linux/macOS use LF (Line Feed). Git is configured to handle these differences, but if you encounter unexpected issues related to line endings (e.g., in shell scripts or when collaborating across different OS environments), ensure your Git configuration (`core.autocrlf`) is set appropriately or use a text editor that can manage line endings consistently.
