@@ -28,3 +28,6 @@ venv/
 
 # Build artifacts
 *.egg-info/
+
+# Temporary directory for agent
+/temp/
