@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# IDEs
+.idea/
+.vscode/
+
+# uv lock file
+
+# pytest cache
+.pytest_cache/
+
+# ruff cache
+.ruff_cache/
+
+# My stuff
+*.log
+*.sqlite3
+
+# Build artifacts
+*.egg-info/
