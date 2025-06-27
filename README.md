@@ -1,6 +1,6 @@
 # Python Project Skeleton
 
-This is a basic Python project skeleton set up with `uv` for dependency management, `ruff` for linting and formatting, `pyright` for type checking, and `pytest` for unit testing.
+This project is being developed using the Gemini CLI for "vibe coding" and experimentation. It's a basic Python project skeleton set up with `uv` for dependency management, `ruff` for linting and formatting, `pyright` for type checking, and `pytest` for unit testing.
 
 ## Getting Started
 
