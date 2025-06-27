@@ -62,7 +62,7 @@ uv.lock              # Locked dependency versions for reproducible builds
 ## Key Technologies
 
 - Python
-- `uv` (package manager and virtual environment creator)
+- `uv` (package manager and virtual environment creator) - **Note: Always use non-legacy `uv` commands like `uv sync` and `uv run`. Avoid `uv pip install` and direct `pip` calls when `uv` alternatives exist.**
 - `ruff` (linter and formatter)
 - `pyright` (type checker)
 - `pytest` (testing framework)
