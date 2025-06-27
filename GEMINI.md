@@ -29,6 +29,7 @@
 - Always propose a draft commit message.
 - After each commit, confirm success with `git status`.
 - Never push changes to a remote repository without being asked explicitly.
+- When creating a Pull Request, ensure `CHANGELOG.md` is updated with relevant changes.
 
 ## Python Specifics
 - **uv:** Always use non-legacy `uv` commands like `uv sync` and `uv run`. Avoid `uv pip install` and direct `pip` calls.
