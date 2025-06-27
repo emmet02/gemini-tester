@@ -56,3 +56,5 @@ pyproject.toml       # Project configuration and dependencies
 README.md            # General project information
 uv.lock              # Locked dependency versions for reproducible builds
 ```
+
+<!-- Trivial commit to enable PR creation -->
