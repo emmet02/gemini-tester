@@ -85,3 +85,31 @@ Specify the licensing for the project (e.g., MIT, Apache 2.0).
 ## Contact
 
 Provide contact information for questions or support.
+
+## Development Environment Notes
+
+### GitHub CLI (gh)
+
+When interacting with GitHub from the command line, the `gh` CLI tool is recommended. For creating pull requests, you can use:
+
+```bash
+gh pr create --base <base-branch> --head <head-branch> --title "Your PR Title" --body "Your PR description"
+```
+
+If you encounter issues with complex multi-line bodies or special characters, consider writing the body to a file and using the `--body-file` flag:
+
+```bash
+gh pr create --base <base-branch> --head <head-branch> --title "Your PR Title" --body-file /path/to/your/pr_body.txt
+```
+
+Alternatively, to open a web browser for PR creation (which bypasses command-line parsing issues):
+
+```bash
+gh pr create --base <base-branch> --head <head-branch> --web
+```
+
+### Windows Environment and Line Endings
+
+This project is developed on a Windows operating system. Be aware that Windows typically uses CRLF (Carriage Return + Line Feed) for line endings, while Linux/macOS use LF (Line Feed). Git is configured to handle these differences, but if you encounter unexpected issues related to line endings (e.g., in shell scripts or when collaborating across different OS environments), ensure your Git configuration (`core.autocrlf`) is set appropriately or use a text editor that can manage line endings consistently.
+
+For shell commands executed within the agent, commands like `del` or `rm` might require specific syntax (e.g., backslashes for paths, proper quoting) due to the Windows command-line interpreter's requirements.
