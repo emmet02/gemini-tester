@@ -25,3 +25,6 @@ select = ["E", "F", "I"]
 include = ["src"]
 exclude = ["**/__pycache__"]
 typeCheckingMode = "strict"
+
+[dependency-groups]
+dev = []

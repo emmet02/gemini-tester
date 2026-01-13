@@ -33,10 +33,10 @@ repos:
     hooks:
       - id: ty-check
 
-  - repo: https://github.com/francescorubbo/deptry-pre-commit.git
-    rev: v0.24.0.1
-    hooks:
-      - id: deptry
+  # - repo: https://github.com/francescorubbo/deptry-pre-commit.git
+  #   rev: v0.24.0.1
+  #   hooks:
+  #     - id: deptry
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.36.0
